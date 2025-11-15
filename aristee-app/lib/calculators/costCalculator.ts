@@ -57,8 +57,8 @@ export function calculateCosts(chantier: ChantierInput): CostBreakdown {
     timeEstimation.tempsTotal * salaireHoraireCharge +
     config.fraisDeplacement;
 
-  // 6. Total
-  const total = coutTransport + coutCarburant + coutMachine + coutMainOeuvre;
+  // 6. Total (seulement transport et carburant)
+  const total = coutTransport + coutCarburant;
 
   return {
     transport: Math.round(coutTransport),
